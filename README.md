@@ -1,25 +1,53 @@
-# Stackbit Tutorial [Next.js + Files]
+# Stackbit Next.js + Markdown Files Starter
 
-![Tutorial Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb-v2.png)
+![Screenshot](https://assets.stackbit.com/docs/tutorial-shared-thumb.png)
 
-**ℹ️ This project is used as a starting point for [a getting started tutorial](https://docs.stackbit.com/getting-started/nextjs-markdown) using markdown files (Git CMS) as the content source.**
+**ℹ️ This reposoitory is based on [our Getting Started tutorial](https://docs.stackbit.com/getting-started) in its completed state.**
 
-## Prerequisites
+There are two ways to start using this project: importing it via the UI, or developing locally.
 
-Before you begin, make sure you are using Node v14 or newer.
+## Creating a Stackbit Project via the UI
 
-## Project Setup
+To create a cloud-based Stackbit project based on this repository, [click here](https://app.stackbit.com/import?mode=duplicate&repository=https%3A%2F%2Fgithub.com%2Fstackbit-themes%2Fnextjs-markdown-starter&validate=auto).
 
-Use the `create-stackbit-app` command to create a new project:
+A new GitHub repository with this codebase will be created for you. You can transfer ownership of the duplicated repository to you through the Project Settings.
 
-    npx create-stackbit-app@latest --example tutorial-nextjs-files
+A live production build of the website on Netlify is automatically provisioned.
 
-This will create a new instance of this project in a `tutorial-nextjs-files` directory and install dependencies. Change into the new directory and start the development server.
+## Developing Locally
 
-    cd tutorial-nextjs-files
+### Clone this repository
+
+Clone this repository, then run `npm install` in its root directory.
+
+### Run the Website
+
+Run the Next.js development server:
+
     npm run dev
 
-Visit `localhost:3000` and you should see the example content. Now you can continue with the tutorial!
+Visit [localhost:3000](http://localhost:3000).
+
+### Run Stackbit in Local Development Mode
+
+Keep the Next.js development server running, and open a new command-line window in the same directory.
+
+Install Stackbit's CLI tools (once):
+    
+    npm i -g @stackbit/cli@latest
+
+Run the CLI:
+
+    stackbit dev
+
+Click the displayed link to [localhost:8090/_stackbit](http://localhost:8090/_stackbit) and the visual editor will open.
+
+### Create a Cloud-Based Stackbit Project
+
+To deploy a cloud-based Stackbit project connected to your repository:
+
+1. Push your code to a GitHub repository
+1. Open the [import page](https://app.stackbit.com/import) and choose *Use my repository*.
 
 ## Support
 
