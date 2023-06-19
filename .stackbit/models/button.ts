@@ -4,8 +4,8 @@ export const button: ObjectModel = {
     name: 'button',
     type: 'object',
     fields: [
-        { name: 'label', type: 'string' },
-        { name: 'url', type: 'string' },
-        { name: 'theme', type: 'enum', options: ['default', 'outline'] }
+        { name: 'label', type: 'string', default: 'Get Started' },
+        { name: 'url', type: 'string', default: '/' },
+        { name: 'theme', type: 'enum', options: ['default', 'outline'], default: 'outline' }
     ]
 };
