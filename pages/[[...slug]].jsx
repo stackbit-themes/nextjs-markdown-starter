@@ -21,14 +21,29 @@ const componentMap = {
 export default function ComposablePage({ page }) {
     return (
         <div data-sb-object-id={page._id}>
-            {(page.sections || []).map((section, idx) => {
-                const Component = componentMap[section.type];
-                return (
-                    <div data-sb-field-path={`sections.${idx}`} key={idx}>
-                        <Component key={idx} {...section} />
-                    </div>
-                )
-            })}
+            {page.sections?.length ? (
+                page.sections.map((section, idx) => {
+                    const Component = componentMap[section.type];
+                    return (
+                        <div data-sb-field-path={`sections.${idx}`} key={idx}>
+                            <Component {...section} />
+                        </div>
+                    );
+                })
+            ) : (
+                <EmptyState />
+            )}
+        </div>
+    );
+}
+
+function EmptyState() {
+    return (
+        <div className="flex items-center justify-center w-full py-32">
+            <div className="border-4 border-gray-400 rounded p-16 border-dashed flex flex-col gap-2 items-center">
+                <span className="text-2xl">Empty page! add sections.</span>
+                <span>(this message does not appear in production)</span>
+            </div>
         </div>
     );
 }

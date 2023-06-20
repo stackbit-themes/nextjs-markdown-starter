@@ -2,10 +2,17 @@
     "model": "page",
     "presets": [
         {
+            "label": "Empty page",
+            "thumbnail": "images/page-empty.png",
+            "data": {
+                "title": "Empty page"
+            }
+        },
+        {
             "label": "Landing",
+            "thumbnail": "images/page-landing.png",
             "data": {
                 "title": "Example landing page",
-                "thumbnail": "images/page-landing.png",
                 "sections": [
                     {
                         "heading": "This is your main value proposition",
