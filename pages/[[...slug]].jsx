@@ -38,12 +38,14 @@ export default function ComposablePage({ page }) {
 }
 
 function EmptyState() {
-    return (
+    return process.env.NODE_ENV === 'development' ? (
         <div className="flex items-center justify-center w-full py-32">
             <div className="border-4 border-gray-400 rounded p-16 border-dashed flex flex-col gap-2 items-center">
                 <span className="text-2xl">Empty page! add sections.</span>
                 <span>(this message does not appear in production)</span>
             </div>
         </div>
+    ) : (
+        <></>
     );
 }
