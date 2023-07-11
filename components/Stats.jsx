@@ -11,12 +11,12 @@ export const Stats = (props) => {
             <div className="mx-auto">
                 <div className="max-w-2xl mx-auto mb-16">
                     <h2 className="mb-4 text-4xl sm:text-5xl" data-sb-field-path=".heading">{props.heading}</h2>
-                    <Markdown options={{ forceBlock: true }} className="sm:text-xl" data-sb-field-path=".body">
+                    {props.body && <Markdown options={{ forceBlock: true }} className="sm:text-xl" data-sb-field-path=".body">
                         {props.body}
-                    </Markdown>
+                    </Markdown>}
                 </div>
                 <div className="grid max-w-3xl gap-12 mx-auto sm:grid-cols-3">
-                    {props.stats.length > 0 && props.stats.map((stat, idx) => <StatItem key={idx} theme={props.theme} {...stat} data-sb-field-path={`.stats.${idx}`} />)}
+                    {props.stats?.length > 0 && props.stats.map((stat, idx) => <StatItem key={idx} theme={props.theme} {...stat} data-sb-field-path={`.stats.${idx}`} />)}
                 </div>
             </div>
         </div>

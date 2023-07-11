@@ -4,13 +4,13 @@ export const hero: ObjectModel = {
     name: 'hero',
     type: 'object',
     fields: [
-        { name: 'heading', type: 'string' },
-        { name: 'body', type: 'markdown' },
+        { name: 'heading', type: 'string'},
+        { name: 'body', type: 'markdown'},
         {
             name: 'image',
             type: 'object',
             fields: [
-                { name: 'src', type: 'image' },
+                { name: 'src', type: 'image', default: "/images/fpo-shapes.png"},
                 { name: 'alt', type: 'string' }
             ]
         },

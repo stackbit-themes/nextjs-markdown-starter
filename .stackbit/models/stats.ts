@@ -12,8 +12,8 @@ export const stats: ObjectModel = {
             items: {
                 type: 'object',
                 fields: [
-                    { name: 'label', type: 'string' },
-                    { name: 'value', type: 'string' }
+                    { name: 'label', type: 'string', default: 'Five-star reviews' },
+                    { name: 'value', type: 'string', default: '5M' }
                 ]
             }
         },
