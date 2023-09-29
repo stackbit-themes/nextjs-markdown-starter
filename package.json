@@ -17,13 +17,13 @@
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.23",
-        "@stackbit/types": "^0.10.3",
+        "@stackbit/cms-git": "^0.3.25",
+        "@stackbit/types": "^0.10.4",
         "autoprefixer": "^10.4.16",
         "eslint": "8.46.0",
         "eslint-config-next": "13.4.12",
         "fs-extra": "^11.1.1",
-        "postcss": "^8.4.30",
+        "postcss": "^8.4.31",
         "tailwindcss": "^3.3.3"
     }
 }
