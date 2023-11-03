@@ -17,8 +17,8 @@
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.31",
-        "@stackbit/types": "^0.10.11",
+        "@stackbit/cms-git": "^0.3.32",
+        "@stackbit/types": "^0.10.12",
         "autoprefixer": "^10.4.16",
         "eslint": "8.46.0",
         "eslint-config-next": "13.4.12",
