@@ -1,16 +1,12 @@
-import { Hero } from '../components/Hero.jsx';
-import { Stats } from '../components/Stats.jsx';
-import { getPageFromSlug, getPagePaths } from '../utils/content.js';
+import { Hero } from '../../components/Hero.jsx';
+import { Stats } from '../../components/Stats.jsx';
+import { getPageFromSlug, getPagePaths } from '../../utils/content.js';
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
     const paths = await getPagePaths();
-    return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
-    const slug = '/' + (params?.slug ?? ['']).join('/');
-    const page = await getPageFromSlug(slug);
-    return { props: { page } };
+    return paths.map((path) => ({
+        slug: path.split('/').filter(Boolean)
+    }));
 }
 
 const componentMap = {
@@ -18,7 +14,9 @@ const componentMap = {
     stats: Stats
 };
 
-export default function ComposablePage({ page }) {
+export default async function ComposablePage({ params }) {
+    const slug = '/' + (params?.slug ?? ['']).join('/');
+    const page = await getPageFromSlug(slug);
     return (
         <div data-sb-object-id={page._id}>
             {page.sections?.length ? (
