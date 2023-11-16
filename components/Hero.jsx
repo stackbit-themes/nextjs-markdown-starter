@@ -23,7 +23,8 @@ export const Hero = (props) => {
                 <div className="w-full aspect-[4/3] flex-1 relative overflow-hidden rounded-md">
                     {props.image?.src && <Image src={props.image?.src} alt={props.image?.alt} 
                     fill
-                    className='object-cover' 
+                    className='object-cover'
+                    priority 
                     sizes="(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 600px"
                     data-sb-field-path=".image" />}
                 </div>
