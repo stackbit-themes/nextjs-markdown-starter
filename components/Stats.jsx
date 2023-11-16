@@ -7,7 +7,7 @@ const themeClassMap = {
 
 export const Stats = (props) => {
     return (
-        <div className={`py-24 px-12 text-center ${themeClassMap[props.theme] ?? themeClassMap['dark']}`}>
+        <div className={`px-6 py-16 text-center ${themeClassMap[props.theme] ?? themeClassMap['dark']} sm:px-12 sm:py-24`}>
             <div className="mx-auto">
                 <div className="max-w-2xl mx-auto mb-16">
                     <h2 className="mb-4 text-4xl sm:text-5xl" data-sb-field-path=".heading">{props.heading}</h2>
