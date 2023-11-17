@@ -38,7 +38,7 @@ export default async function ComposablePage({ params }) {
 function EmptyState() {
     return process.env.NODE_ENV === 'development' ? (
         <div className="flex items-center justify-center w-full py-32">
-            <div className="border-4 border-gray-400 rounded p-16 border-dashed flex flex-col gap-2 items-center">
+            <div className="flex flex-col items-center gap-2 p-16 border-4 border-gray-400 border-dashed rounded">
                 <span className="text-2xl">Empty page! add sections.</span>
                 <span>(this message does not appear in production)</span>
             </div>
