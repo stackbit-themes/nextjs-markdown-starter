@@ -11,14 +11,14 @@
     "dependencies": {
         "glob": "^8.1.0",
         "gray-matter": "^4.0.3",
-        "markdown-to-jsx": "^7.3.2",
+        "markdown-to-jsx": "^7.4.0",
         "next": "14.0.4",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@stackbit/cms-git": "^0.3.39",
-        "@stackbit/types": "^0.10.19",
+        "@stackbit/cms-git": "^0.3.40",
+        "@stackbit/types": "^0.10.20",
         "autoprefixer": "^10.4.16",
         "eslint": "8.56.0",
         "eslint-config-next": "14.0.4",
